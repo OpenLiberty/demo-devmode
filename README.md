@@ -88,7 +88,7 @@ public class SystemReadinessCheck implements HealthCheck {
 ```
 </details>
 
-7. Change the `io_openliberty_guides_system_inMaintenance` property in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
+7. Change the `io_openliberty_guides_system_inMaintenance` variable in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
 
 
 8. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
