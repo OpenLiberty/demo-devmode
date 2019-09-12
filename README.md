@@ -88,13 +88,13 @@ public class SystemReadinessCheck implements HealthCheck {
 ```
 </details>
 
-8. Change the `io_openliberty_guides_system_inMaintenance` property in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
+7. Change the `io_openliberty_guides_system_inMaintenance` property in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
 
 
-9. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
+8. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
 
 <details>
-    <summary>10. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console. The tests are run and should pass. </summary>
+    <summary>9. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console. The tests are run and should pass. </summary>
     
 ```
 package it.io.openliberty.sample;
@@ -199,6 +199,6 @@ public class HealthEndpointIT {
 ```
 </details>
 
-12. Connect to the debug port 7777 with a debugger.
+10. Connect to the debug port 7777 with a debugger.
 
-13. When you are done use ctrl-c to terminate liberty:dev mode and stop your server.
+11. When you are done use ctrl-c to terminate liberty:dev mode and stop your server.
