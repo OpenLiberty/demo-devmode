@@ -6,9 +6,9 @@ https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md
 ## Demo scenario
 1. Clone this repo.
 
-2. Run `mvn liberty:dev` to start liberty:dev mode
+2. Run `mvn liberty:dev` to start dev mode.
 
-3. Add `mpHealth-2.0` feature to the server.xml, you can now access the http://localhost:9080/health endpoint (though it's just an empty array)
+3. Add `mpHealth-2.0` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
 <details>
     <summary>4. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
@@ -201,4 +201,4 @@ public class HealthEndpointIT {
 
 10. Connect to the debug port 7777 with a debugger.
 
-11. When you are done use ctrl-c to terminate liberty:dev mode and stop your server.
+11. When you are done use ctrl-c to terminate dev mode and stop your server.
