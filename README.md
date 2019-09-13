@@ -6,7 +6,7 @@
 
 ## Demo scenario
 
-##### Hot deployment
+### Hot deployment
 
 1. Clone this repo.
 
@@ -93,7 +93,7 @@ public class SystemReadinessCheck implements HealthCheck {
 
 7. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
 
-##### Hot testing
+### Hot testing
 
 1. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
 
@@ -209,7 +209,7 @@ public class HealthEndpointIT {
 
 5. Notice tests are run immediately after dev mode starts up.
 
-6. In the Java file `src/main/java/io/openliberty/sample/system/SystemResource.java`, change the annotation `@Path("/properties")` to `@Path("/properties2")`.
+6. In `src/main/java/io/openliberty/sample/system/SystemResource.java`, change the annotation `@Path("/properties")` to `@Path("/properties2")`.
 
 7. Notice tests are run automatically after the source change, and a test fails because the endpoint path is wrong.
 
@@ -217,11 +217,20 @@ public class HealthEndpointIT {
 
 9. Notice tests are run automatically and pass.
 
-##### Hot debugging
+### Hot debugging
 
-1. Connect to the debug port 7777 with a debugger.
+1. In `src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`, set a breakpoint inside the `call()` method.
 
-2. When you are done, press Ctrl-C in the console to terminate dev mode and stop your server.
+2. Attach your IDE's debugger to port `7777`.  
+For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach` > set `"port": "7777"`.  Then `View` > `Debug` > select `Debug (Attach)`, then press the arrow icon to start debugging.
+
+3. In your browser, go to http://localhost:9080/health.
+
+4. Notice your IDE pauses at the breakpoint that you set, allowing you to debug.
+
+5. Disconnect the debugger.
+
+6. When you are done, press Ctrl-C in the console to terminate dev mode and stop your server.
 
 ## VS Code extension
 
