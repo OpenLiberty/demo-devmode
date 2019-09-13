@@ -1,6 +1,6 @@
-# Liberty Dev Mode Demo
+# Liberty dev mode demo
 
-### Quick Links
+### Quick links
 [Dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
 [Liberty Dev VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
