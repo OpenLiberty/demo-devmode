@@ -2,7 +2,7 @@
 
 ### Quick Links
 [Dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
-[Liberty Dev VS Code extension](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
+[Liberty Dev VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
 1. Clone this repo.
