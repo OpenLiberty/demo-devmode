@@ -1,7 +1,8 @@
-# Liberty dev mode demo
+# Liberty Dev Mode Demo
 
-### Documentation
-https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md
+### Links
+[Liberty Dev Mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
+[Liberty Dev VS Code extension](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
 1. Clone this repo.
@@ -202,3 +203,6 @@ public class HealthEndpointIT {
 10. Connect to the debug port 7777 with a debugger.
 
 11. When you are done use ctrl-c to terminate dev mode and stop your server.
+
+## VS Code extension
+
