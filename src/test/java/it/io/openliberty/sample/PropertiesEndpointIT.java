@@ -29,8 +29,9 @@ public class PropertiesEndpointIT {
   public void testGetProperties() {
 
       // system properties
-      String port = System.getProperty("liberty.test.port", "9080");
-      String url = "http://localhost:" + port + "/";
+      String hostname = System.getProperty("liberty.hostname", "localhost");
+      String port = System.getProperty("liberty.http.port", "9080");
+      String url = "http://" + hostname + ":" + port + "/";
 
       // client setup
       Client client = ClientBuilder.newClient();
