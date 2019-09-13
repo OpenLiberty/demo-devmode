@@ -235,6 +235,8 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 ## VS Code extension
 
+The `Liberty Dev` extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
+
 1. In VS Code, go to the Extensions view (`View` > `Extensions`).
 
 2. Search for `Liberty Dev`.
@@ -245,6 +247,6 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 5. In the side bar, `Liberty Dev Dashboard` shows your Liberty dev projects.
 
-6. Right-click your project to start, stop, and interact with dev mode as an alternative to using the console.
+6. Right-click your project to start, stop, and interact with dev mode.
 
 <img src="libertydev_vscode.png" width="50%" height="50%" title="Liberty Dev VS Code extension">
