@@ -6,7 +6,7 @@
 
 ## Demo scenario
 
-##### Hot deployment
+### Hot deployment
 
 1. Clone this repo.
 
@@ -93,7 +93,7 @@ public class SystemReadinessCheck implements HealthCheck {
 
 7. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
 
-##### Hot testing
+### Hot testing
 
 1. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
 
@@ -217,7 +217,7 @@ public class HealthEndpointIT {
 
 9. Notice tests are run automatically and pass.
 
-##### Hot debugging
+### Hot debugging
 
 1. Connect to the debug port 7777 with a debugger.
 
