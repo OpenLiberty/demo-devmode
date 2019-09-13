@@ -203,11 +203,25 @@ public class HealthEndpointIT {
 ```
 </details>
 
+3. Stop dev mode by pressing Ctrl-C in the console.
+
+4. Run `mvn liberty:dev -DhotTests` to enable hot testing.
+
+5. Notice tests are run immediately after dev mode starts up.
+
+6. In the Java file `src/main/java/io/openliberty/sample/system/SystemResource.java`, change the annotation `@Path("/properties")` to `@Path("/properties2")`.
+
+7. Notice tests are run automatically after the source change, and a test fails because the endpoint path is wrong.
+
+8. Revert the annotation back to `@Path("/properties")`.
+
+9. Notice tests are run automatically and pass.
+
 ##### Hot debugging
 
 1. Connect to the debug port 7777 with a debugger.
 
-2. When you are done use ctrl-c to terminate dev mode and stop your server.
+2. When you are done, press Ctrl-C in the console to terminate dev mode and stop your server.
 
 ## VS Code extension
 
