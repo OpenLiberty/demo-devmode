@@ -206,3 +206,10 @@ public class HealthEndpointIT {
 
 ## VS Code extension
 
+1. In VS Code, go to the Extensions view (View > Extensions)
+2. Search for `Liberty Dev`
+3. Click `Install`
+4. Go to the Explorer view (View > Explorer)
+5. In the side bar, `Liberty Dev Dashboard` shows your Liberty dev projects.
+6. Right-click your project to start, stop, and interact with dev mode as an alternative to using the console.
+<img src="libertydev_vscode.png" width="50%" height="50%" title="Liberty Dev VS Code extension">
