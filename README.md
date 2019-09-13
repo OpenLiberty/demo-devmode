@@ -5,6 +5,9 @@
 [Liberty Dev VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
+
+##### Hot deployment
+
 1. Clone this repo.
 
 2. Run `mvn liberty:dev` to start dev mode.
@@ -47,11 +50,8 @@ public class SystemLivenessCheck implements HealthCheck {
 ```
 </details>
 
-
-5. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
-
 <details>
-    <summary>6. Create the src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint. </summary>
+    <summary>5. Create the src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint. </summary>
 
 ```
 package io.openliberty.sample.system;
@@ -89,13 +89,16 @@ public class SystemReadinessCheck implements HealthCheck {
 ```
 </details>
 
-7. Change the `io_openliberty_guides_system_inMaintenance` variable in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
+6. Change the `io_openliberty_guides_system_inMaintenance` variable in `src/main/liberty/config/server.xml` to true.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
 
+7. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
 
-8. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
+##### Hot testing
+
+1. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
 
 <details>
-    <summary>9. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console. The tests are run and should pass. </summary>
+    <summary>2. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console. The tests are run and should pass. </summary>
     
 ```
 package it.io.openliberty.sample;
@@ -200,9 +203,11 @@ public class HealthEndpointIT {
 ```
 </details>
 
-10. Connect to the debug port 7777 with a debugger.
+##### Hot debugging
 
-11. When you are done use ctrl-c to terminate dev mode and stop your server.
+1. Connect to the debug port 7777 with a debugger.
+
+2. When you are done use ctrl-c to terminate dev mode and stop your server.
 
 ## VS Code extension
 
