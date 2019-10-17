@@ -7,7 +7,8 @@
         <feature>mpConfig-1.3</feature>
     </featureManager>
 
-    <webApplication location="getting-started.war" contextRoot="/" />
+    <webApplication location="demo-devmode.war" contextRoot="/"/>
+
     <mpMetrics authentication="false"/>
 
     <!-- tag::logging[] -->

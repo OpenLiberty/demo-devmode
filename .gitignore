@@ -1,6 +1,9 @@
 # Maven generated
 target/
 
+# Gradle generated
+build/
+
 # Eclipse generated
 .apt_generated/
 .settings/
@@ -21,6 +24,8 @@ README.html
 
 # VSCode
 .vscode/
+.gradle/
 
 # Zip files
 *.zip
+
