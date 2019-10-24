@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Copyright (c) 2018 IBM Corporation and others.
+* Copyright (c) 2018, 2019 IBM Corporation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -13,12 +13,12 @@ function displayMetrics() {
 }
 
 function getSystemMetrics() {
-    var url = "http://localhost:9080/metricsOverHTTP";
+    var url = "http://localhost:9080/metrics";
     var req = new XMLHttpRequest();
 
     var metricToDisplay = {};
-    metricToDisplay["application_getProperties"] = "Request Count";
-    metricToDisplay["application_io_openliberty_sample_system_SystemResource_getPropertiesTime_min_seconds"] = "Min Request Time (ms)";
+    metricToDisplay["application_getProperties_total"] = "Request Count";
+    metricToDisplay["application_io_openliberty_sample_system_SystemResource_getPropertiesTime_one_min_rate_per_second"] = "Min Request Time (ms)";
     metricToDisplay["application_io_openliberty_sample_system_SystemResource_getPropertiesTime_mean_seconds"] = "Mean Request Time (ms)";
     metricToDisplay["application_io_openliberty_sample_system_SystemResource_getPropertiesTime_max_seconds"] = "Max Request Time (ms)";
     metricToDisplay["base_cpu_processCpuLoad_percent"] = "System CPU Usage (%)";
@@ -40,7 +40,7 @@ function getSystemMetrics() {
         }
 
         var resp = req.responseText;
-        var regexpToMatch = new RegExp(metricToMatch, "gmi");
+        var regexpToMatch = new RegExp(metricToMatch, "gm");
         var matchMetrics = resp.match(regexpToMatch);
 
         var keyValPairs = {};
