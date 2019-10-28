@@ -32,3 +32,5 @@ dependencies {
     testCompile 'org.apache.cxf:cxf-rt-rs-extension-providers:3.2.6'
     testCompile 'org.glassfish:javax.json:1.0.4'
 }
+
+clean.dependsOn 'libertyStop'
