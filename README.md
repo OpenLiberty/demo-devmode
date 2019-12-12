@@ -223,17 +223,15 @@ public class HealthEndpointIT {
 
 ### Hot debugging
 
-1. Run `gradle libertyDev --libertyDebug` to start dev mode with debugging.
+1. In `src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`, set a breakpoint inside the `call()` method.
 
-2. In `src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`, set a breakpoint inside the `call()` method.
-
-3. Attach your IDE's debugger to port `7777`.  
+2. Attach your IDE's debugger to port `7777`.  
 For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach` > set `"port": "7777"`.  Then `View` > `Debug` > select `Debug (Attach)`, then press the arrow icon to start debugging.
 
-4. In your browser, go to http://localhost:9080/health.
+3. In your browser, go to http://localhost:9080/health.
 
-5. Notice your IDE pauses at the breakpoint that you set, allowing you to debug.
+4. Notice your IDE pauses at the breakpoint that you set, allowing you to debug.
 
-6. Disconnect the debugger.
+5. Disconnect the debugger.
 
-7. When you are done, press Ctrl-C in the console to terminate dev mode and stop your server.
+6. When you are done, press Ctrl-C in the console to terminate dev mode and stop your server.
