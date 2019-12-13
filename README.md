@@ -5,8 +5,8 @@
 [Liberty Dev VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ### Where to find demo instructions for supported build tools
-* [Maven demo scenario](##Maven-demo-scenario)
-* [Gradle demo scenario](##Gradle-demo-scenario)
+* [Maven demo scenario](#Maven-demo-scenario)
+* [Gradle demo scenario](#Gradle-demo-scenario)
 
 <!-- This title is used as a link in the instructions -->
 <!-- If you modify this title you also need to modify the link at the top of the readme -->
