@@ -240,9 +240,9 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 ## VS Code extension
 
-At the moment, this extension is for Maven projects only.
-
 The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
+
+At the moment, this extension is for Maven projects only.
 
 1. In VS Code, go to the Extensions view (`View` > `Extensions`).
 
