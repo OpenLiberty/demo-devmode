@@ -10,11 +10,14 @@ tasks.withType(JavaCompile) {
 // configure liberty-gradle-plugin 
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
+        maven {
+            name = 'Sonatype Nexus Snapshots'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.0-SNAPSHOT'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.0-M1-SNAPSHOT'
     }
 }
 
