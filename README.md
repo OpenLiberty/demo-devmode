@@ -1,8 +1,9 @@
 # Liberty dev mode demo
 
 ### Quick links
-[Dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
-[Liberty Dev VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
+[Maven dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
+[Gradle dev mode documentation](https://github.com/OpenLiberty/ci.gradle/blob/master/docs/libertyDev.md)  
+[Open Liberty Tools VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
 
@@ -10,14 +11,16 @@
 
 1. Clone this repo.
 
-2. Run `mvn liberty:dev` to start dev mode.
+2. Start dev mode:
+    - Maven: `mvn liberty:dev`
+    - Gradle: `gradle libertyDev`
 
 3. Add `mpHealth-2.0` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
 <details>
     <summary>4. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
 
-```
+```java
 package io.openliberty.sample.system;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -53,7 +56,7 @@ public class SystemLivenessCheck implements HealthCheck {
 <details>
     <summary>5. Create the src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint. </summary>
 
-```
+```java
 package io.openliberty.sample.system;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -98,9 +101,9 @@ public class SystemReadinessCheck implements HealthCheck {
 1. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
 
 <details>
-    <summary>2. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Notice the "liberty.hostname" and "liberty.http.port" system properties which are provided by dev mode when running integration tests.  Press Enter in the console to run the tests. They should pass. </summary>
+    <summary>2. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console to run the tests. They should pass. </summary>
     
-```
+```java
 package it.io.openliberty.sample;
 
 import static org.junit.Assert.assertEquals;
@@ -206,7 +209,9 @@ public class HealthEndpointIT {
 
 3. Stop dev mode by pressing Ctrl-C in the console.
 
-4. Run `mvn liberty:dev -DhotTests` to enable hot testing.
+4. Run dev mode with hot testing enabled.
+    - Maven: `mvn liberty:dev -DhotTests`
+    - Gradle: `gradle libertyDev --hotTests`
 
 5. Notice tests are run immediately after dev mode starts up.
 
@@ -235,11 +240,13 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 ## VS Code extension
 
-The [Liberty Dev](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
+The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
+
+At the moment, this extension is for Maven projects only.
 
 1. In VS Code, go to the Extensions view (`View` > `Extensions`).
 
-2. Search for `Liberty Dev`.
+2. Search for `Open Liberty Tools`.
 
 3. Click `Install`.
 
@@ -249,4 +256,4 @@ The [Liberty Dev](https://marketplace.visualstudio.com/items?itemName=Open-Liber
 
 6. Right-click your project to start, stop, and interact with dev mode.
 
-<img src="libertydev_vscode.png" width="50%" height="50%" title="Liberty Dev VS Code extension">
+<img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
