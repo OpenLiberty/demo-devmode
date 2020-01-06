@@ -11,13 +11,9 @@ tasks.withType(JavaCompile) {
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            name = 'Sonatype Nexus Snapshots'
-            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
-        }
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.0-M1-SNAPSHOT'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.0-M1'
     }
 }
 
@@ -32,8 +28,8 @@ dependencies {
 
     // test dependencies
     testCompile 'junit:junit:4.12'
-    testCompile 'org.apache.cxf:cxf-rt-rs-client:3.2.6'
-    testCompile 'org.apache.cxf:cxf-rt-rs-extension-providers:3.2.6'
+    testCompile 'org.apache.cxf:cxf-rt-rs-client:3.3.4'
+    testCompile 'org.apache.cxf:cxf-rt-rs-extension-providers:3.3.4'
     testCompile 'org.glassfish:javax.json:1.0.4'
     testCompile 'javax.xml.bind:jaxb-api:2.3.1'
 }
