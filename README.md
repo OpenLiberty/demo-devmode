@@ -101,7 +101,7 @@ public class SystemReadinessCheck implements HealthCheck {
 1. Go to the console where you started dev mode, and press Enter.  The integration tests are run on a separate thread while dev mode is still active.
 
 <details>
-    <summary>2. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Press Enter in the console to run the tests. They should pass. </summary>
+    <summary>2. Create the src/test/java/it/io/openliberty/sample/HealthEndpointIT.java class as an integration test. Notice the "liberty.hostname" and "liberty.http.port" system properties which are provided by dev mode when running integration tests. Press Enter in the console to run the tests. They should pass. </summary>
     
 ```java
 package it.io.openliberty.sample;
