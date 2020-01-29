@@ -7,7 +7,7 @@
         <feature>mpConfig-1.3</feature>
     </featureManager>
 
-    <webApplication location="demo-devmode.war" contextRoot="/"/>
+    <webApplication location="${artifactId}.war" contextRoot="/"/>
 
     <mpMetrics authentication="false"/>
 

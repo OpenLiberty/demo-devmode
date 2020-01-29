@@ -17,6 +17,10 @@ buildscript {
     }
 }
 
+ext {
+    liberty.server.var.artifactId = "${rootProject.name}"
+}
+
 repositories {
     mavenCentral()
 }
