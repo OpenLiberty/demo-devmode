@@ -28,7 +28,7 @@ repositories {
 dependencies {
     // provided dependencies
     providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
-    providedCompile 'org.eclipse.microprofile:microprofile:3.0'
+    providedCompile 'org.eclipse.microprofile:microprofile:3.2'
 
     // test dependencies
     testImplementation 'junit:junit:4.12'
