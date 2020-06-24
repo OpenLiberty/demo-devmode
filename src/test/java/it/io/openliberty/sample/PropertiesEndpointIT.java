@@ -46,9 +46,9 @@ public class PropertiesEndpointIT {
 
       JsonObject obj = response.readEntity(JsonObject.class);
 
-      assertEquals("The system property for the local and remote JVM should match",
-                   System.getProperty("os.name"),
-                   obj.getString("os.name"));
+      assertEquals("The system property for the server output directory should match with the Open Liberty container image.",
+                   "/opt/ol/wlp/output/defaultServer/",
+                   obj.getString("server.output.dir"));
 
       response.close();
   }
