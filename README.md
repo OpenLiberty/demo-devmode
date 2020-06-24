@@ -254,4 +254,4 @@ The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Ope
 
 6. Right-click your project to start, stop, and interact with dev mode.
 
-<img src="libertydev_vscode.png" title="Open Liberty Tools VS Code extension">
+<img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
