@@ -1,24 +1,26 @@
-# Liberty dev mode demo
+# Liberty dev mode demo with container support
 
 ### Quick links
 [Maven dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
-[Gradle dev mode documentation](https://github.com/OpenLiberty/ci.gradle/blob/master/docs/libertyDev.md)  
 [Open Liberty Tools VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
 
+### Setup
+
+1. Clone this repository.
+
+2. Notice the [Dockerfile](Dockerfile) in the project directory, which describes the container and can be used for both development and production. This demo focuses on iterative development through Liberty dev mode, which makes use of this Dockerfile to run your server in a container.
+
 ### Hot deployment
 
-1. Clone this repo.
+1. Start dev mode with container support:
+    - Maven: `mvn liberty:devc`
 
-2. Start dev mode:
-    - Maven: `mvn liberty:dev`
-    - Gradle: `gradle libertyDev`
-
-3. Add `mpHealth-2.2` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
+2. Add `mpHealth-2.2` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
 <details>
-    <summary>4. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
+    <summary>3. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
 
 ```java
 package io.openliberty.sample.system;
@@ -54,7 +56,7 @@ public class SystemLivenessCheck implements HealthCheck {
 </details>
 
 <details>
-    <summary>5. Create the src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint. </summary>
+    <summary>4. Create the src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint. </summary>
 
 ```java
 package io.openliberty.sample.system;
@@ -92,9 +94,9 @@ public class SystemReadinessCheck implements HealthCheck {
 ```
 </details>
 
-6. Change the `io_openliberty_guides_system_inMaintenance` variable in `src/main/liberty/config/server.xml` to `true`.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
+5. Change the `io_openliberty_guides_system_inMaintenance` variable in `src/main/liberty/config/server.xml` to `true`.  Changes are reflected in the http://localhost:9080/health endpoint.  Undo this afterwards.
 
-7. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
+6. Make changes to the `src/main/webapp/index.html` (or any other webapp files). Changes are reflected on the home page http://localhost:9080/.
 
 ### Hot testing
 
@@ -209,9 +211,8 @@ public class HealthEndpointIT {
 
 3. Stop dev mode by pressing Ctrl-C in the console.
 
-4. Run dev mode with hot testing enabled.
-    - Maven: `mvn liberty:dev -DhotTests`
-    - Gradle: `gradle libertyDev --hotTests`
+4. Run dev mode with container support and hot testing enabled.
+    - Maven: `mvn liberty:devc -DhotTests`
 
 5. Notice tests are run immediately after dev mode starts up.
 
@@ -252,6 +253,6 @@ The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Ope
 
 5. In the side bar, `Liberty Dev Dashboard` shows your Liberty dev projects.
 
-6. Right-click your project to start, stop, and interact with dev mode.
+6. Right-click your project, choose `Start...`, and enter `-Dcontainer` as a parameter to start dev mode with container support. Use the other options on the `Liberty Dev Dashboard` to further interact with dev mode, such as to run tests or to stop the server.
 
 <img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
