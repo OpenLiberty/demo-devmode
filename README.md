@@ -15,7 +15,7 @@
     - Maven: `mvn liberty:dev`
     - Gradle: `gradle libertyDev`
 
-3. Add `mpHealth-2.1` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
+3. Add `mpHealth-2.2` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
 <details>
     <summary>4. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
@@ -242,8 +242,6 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
 
-At the moment, this extension is for Maven projects only.
-
 1. In VS Code, go to the Extensions view (`View` > `Extensions`).
 
 2. Search for `Open Liberty Tools`.
@@ -256,4 +254,4 @@ At the moment, this extension is for Maven projects only.
 
 6. Right-click your project to start, stop, and interact with dev mode.
 
-<img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
+<img src="libertydev_vscode.png" title="Open Liberty Tools VS Code extension">
