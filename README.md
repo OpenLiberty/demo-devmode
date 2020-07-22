@@ -1,21 +1,27 @@
 # Liberty dev mode demo with container support
 
 ### Quick links
-[Maven dev mode documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md)  
+[Maven dev mode for containers documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md#devc-container-mode)  
+[Gradle dev mode for containers documentation](https://github.com/OpenLiberty/ci.gradle/blob/master/docs/libertyDev.md#libertydevc-task-container-mode)  
 [Open Liberty Tools VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## Demo scenario
+
+### Notes
+
+This is a technology preview. The features and parameters described below may change in future milestones or releases of the Liberty Maven plugin. Certain [limitations](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md#limitations) apply to this preview.
 
 ### Setup
 
 1. Clone this repository.
 
-2. Notice the [Dockerfile](Dockerfile) in the project directory, which describes the container and can be used for both development and production. This demo focuses on iterative development through Liberty dev mode, which makes use of this Dockerfile to run your server in a container.
+2. Notice the [Dockerfile for Maven](Dockerfile) or [Dockerfile for Gradle](DockerfileGradle) in the project directory, which describe the container and can be used for both development and production. This demo focuses on iterative development through Liberty dev mode, which makes use of the Dockerfile to run your server in a container.
 
 ### Hot deployment
 
 1. Start dev mode with container support:
     - Maven: `mvn liberty:devc`
+    - Gradle: `gradle libertyDevc`
 
 2. Add `mpHealth-2.2` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
@@ -213,6 +219,7 @@ public class HealthEndpointIT {
 
 4. Run dev mode with container support and hot testing enabled.
     - Maven: `mvn liberty:devc -DhotTests`
+    - Gradle: `gradle libertyDevc --hotTests`
 
 5. Notice tests are run immediately after dev mode starts up.
 
