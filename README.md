@@ -260,6 +260,10 @@ The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Ope
 
 5. In the side bar, `Liberty Dev Dashboard` shows your Liberty dev projects.
 
-6. Right-click your project, choose `Start...`, and enter `-Dcontainer` as a parameter to start dev mode with container support. Use the other options on the `Liberty Dev Dashboard` to further interact with dev mode, such as to run tests or to stop the server.
+6. Right-click your project, choose `Start...`
+
+7. Enter `-Dcontainer` (if using Maven) or `--container` (if using Gradle) as a parameter to start dev mode with container support.
+
+8. Use the other options on the `Liberty Dev Dashboard` to further interact with dev mode, such as to run tests or to stop the server.
 
 <img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
