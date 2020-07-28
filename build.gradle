@@ -10,11 +10,10 @@ tasks.withType(JavaCompile) {
 // configure liberty-gradle-plugin 
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.1-SNAPSHOT'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.1-M1'
     }
 }
 
@@ -23,7 +22,6 @@ ext {
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
 }
 
