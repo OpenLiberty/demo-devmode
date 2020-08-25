@@ -3,7 +3,8 @@
 ### Quick links
 [Maven dev mode for containers documentation](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md#devc-container-mode)  
 [Gradle dev mode for containers documentation](https://github.com/OpenLiberty/ci.gradle/blob/master/docs/libertyDev.md#libertydevc-task-container-mode)  
-[Open Liberty Tools VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
+[Open Liberty Tools VS Code extension (optional)](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)  
+[Open Liberty Tools IntelliJ extension (optional)](https://plugins.jetbrains.com/plugin/14856-open-liberty-tools)
 
 ## Demo scenario
 
@@ -248,7 +249,7 @@ For example, in VS Code, click `Debug` > `Add Configuration...` > `Java: Attach`
 
 ## VS Code extension
 
-The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension for VS Code that lets you interact with dev mode through menu options as an alternative to using the console.
+The [Open Liberty Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) extension is an IDE specific extension that lets you interact with dev mode through menu options as an alternative to using the console.
 
 1. In VS Code, go to the Extensions view (`View` > `Extensions`).
 
@@ -267,3 +268,27 @@ The [Open Liberty Tools](https://marketplace.visualstudio.com/items?itemName=Ope
 8. Use the other options on the `Liberty Dev Dashboard` to further interact with dev mode, such as to run tests or to stop the server.
 
 <img src="libertydev_vscode.png" width="50%" height="50%" title="Open Liberty Tools VS Code extension">
+
+<img src="olt_vscode_custom_start.png" width="50%" height="50%" title="Open Liberty Tools VS Code custom start">
+
+## IntelliJ extension
+
+The [Open Liberty Tools for IntelliJ](https://plugins.jetbrains.com/plugin/14856-open-liberty-tools) extension is an IDE specific extension lets you interact with dev mode through menu options as an alternative to using the console.
+
+1. In IntelliJ, go to the Plugins Marketplace (`Settings` > `Plugins` > `Marketplace`).
+
+2. Search for `Open Liberty Tools`.
+
+3. Click `Install`.
+
+4. In the right side bar, `Liberty Dev Dashboard` shows your Liberty dev projects.
+
+5. Right-click your project, choose `Start...`. You can also select `Start...` from the drop-down list below your project name.
+
+6. Enter `-Dcontainer` (if using Maven) or `--container` (if using Gradle) as a parameter to start dev mode with container support.
+
+7. Use the other options on the `Liberty Dev Dashboard` to further interact with dev mode, such as to run tests or to stop the server.
+
+<img src="olt_intellij.png" width="50%" height="50%" title="Open Liberty Tools IntelliJ extension">
+
+<img src="olt_intellij_custom_start.png" width="50%" height="50%" title="Open Liberty Tools IntelliJ custom start">
