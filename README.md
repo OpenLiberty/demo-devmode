@@ -8,10 +8,6 @@
 
 ## Demo scenario
 
-### Notes
-
-This is a technology preview. The features and parameters described below may change in future milestones or releases of the Liberty Maven plugin. Certain [limitations](https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md#limitations) apply to this preview.
-
 ### Setup
 
 1. Clone this repository.
