@@ -13,7 +13,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.0'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.3'
     }
 }
 
@@ -28,7 +28,7 @@ repositories {
 dependencies {
     // provided dependencies
     providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
-    providedCompile 'org.eclipse.microprofile:microprofile:3.2'
+    providedCompile 'org.eclipse.microprofile:microprofile:4.1'
 
     // test dependencies
     testImplementation 'junit:junit:4.12'
