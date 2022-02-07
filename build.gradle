@@ -10,10 +10,15 @@ tasks.withType(JavaCompile) {
 // configure liberty-gradle-plugin 
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2"
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.3'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.3.1-SNAPSHOT'
     }
 }
 
