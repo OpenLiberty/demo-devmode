@@ -1,6 +1,4 @@
 <server description="Sample Liberty server">
-    <featureManager>
-    </featureManager>
 
     <webApplication location="${artifactId}.war" contextRoot="/"/>
 
