@@ -14,11 +14,10 @@ buildscript {
         mavenCentral()
         maven {
             url "https://plugins.gradle.org/m2"
-            url "https://oss.sonatype.org/content/repositories/snapshots"
         }
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.3.1-SNAPSHOT'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.4'
     }
 }
 

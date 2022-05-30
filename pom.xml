@@ -17,32 +17,6 @@
         <liberty.var.artifactId>${project.artifactId}</liberty.var.artifactId>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>oss-sonatype</id>
-            <name>oss-sonatype</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <!-- Configure Sonatype OSS Maven snapshots repository -->
-        <pluginRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-    </pluginRepositories>
-
     <dependencies>
         <!-- Provided dependencies -->
         <dependency>
@@ -100,7 +74,7 @@
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
-                <version>3.5.2-SNAPSHOT</version>
+                <version>3.6</version>
             </plugin>
             <!-- end::libertyMavenPlugin[] -->
             <plugin>
