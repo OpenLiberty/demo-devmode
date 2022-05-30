@@ -10,13 +10,15 @@
 
 ### Hot deployment with automatic generation of features
 
-1. Clone this repository. Notice the [Dockerfile for Maven](Dockerfile) or [Dockerfile for Gradle](DockerfileGradle) in the project directory, which describe the container and can be used for both development and production. This demo focuses on iterative development through Liberty dev mode, which makes use of the Dockerfile to run your server in a container.
+1. Clone this repository. `git clone https://github.com/OpenLiberty/demo-devmode.git`. Checkout the `devc` branch. `git checkout -b devc origin/devc`. 
+
+Notice the [Dockerfile for Maven](Dockerfile) or [Dockerfile for Gradle](DockerfileGradle) in the project directory, which describe the container and can be used for both development and production. This demo focuses on iterative development through Liberty dev mode, which makes use of the Dockerfile to run your server in a container.
 
 2. Start dev mode with container support:
     - Maven: `mvn liberty:devc`
     - Gradle: `gradle libertyDevc`
 
-    Notice that a new file was automatically created at `src/main/liberty/config/configDropins/overrides/generated-features.xml` containing the cdi-2.0, mpMetrics-3.0 and jaxrs-2.1 features and these features were subsequently installed.
+Notice that a new file was automatically created at `src/main/liberty/config/configDropins/overrides/generated-features.xml` containing the cdi-2.0, mpMetrics-3.0 and jaxrs-2.1 features and these features were subsequently installed.
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <server>
