@@ -74,7 +74,7 @@
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
-                <version>3.5</version>
+                <version>3.6</version>
             </plugin>
             <!-- end::libertyMavenPlugin[] -->
             <plugin>
