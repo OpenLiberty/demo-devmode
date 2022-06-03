@@ -18,7 +18,7 @@ Notice the [Dockerfile for Maven](Dockerfile) or [Dockerfile for Gradle](Dockerf
     - Maven: `mvn liberty:devc`
     - Gradle: `gradle libertyDevc`
 
-Notice that a new file was automatically created at `src/main/liberty/config/configDropins/overrides/generated-features.xml` containing the cdi-2.0, mpMetrics-3.0 and jaxrs-2.1 features and these features were subsequently installed.
+    Notice that a new file was automatically created at `src/main/liberty/config/configDropins/overrides/generated-features.xml` containing the cdi-2.0, mpMetrics-3.0 and jaxrs-2.1 features and these features were subsequently installed.
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <server>
