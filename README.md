@@ -35,7 +35,7 @@
     ```
 
 <details>
-    <summary>3. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class. Notice that the `mpHealth-3.1` feature is generated and installed. Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
+    <summary>3. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class. Notice that the "mpHealth-3.1" feature is generated and installed. Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
 
 ```java
 package io.openliberty.sample.system;
