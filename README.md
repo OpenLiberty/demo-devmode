@@ -20,7 +20,7 @@
     - Maven: `mvn liberty:devc`
     - Gradle: `gradle libertyDevc`
 
-2. Add `mpHealth-3.0` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
+2. Add `mpHealth-3.1` feature to `src/main/liberty/config/server.xml`. You can now access the http://localhost:9080/health endpoint (though it's just an empty array).
 
 <details>
     <summary>3. Create the src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java class.  Changes are reflected in the http://localhost:9080/health endpoint.  </summary>
