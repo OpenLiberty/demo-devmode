@@ -1,8 +1,8 @@
 apply plugin: 'liberty'
 apply plugin: 'war'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
@@ -13,7 +13,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.4'
+        classpath 'io.openliberty.tools:liberty-gradle-plugin:3.5.1'
     }
 }
 
@@ -27,8 +27,8 @@ repositories {
 
 dependencies {
     // provided dependencies
-    providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
-    providedCompile 'org.eclipse.microprofile:microprofile:4.1'
+    providedCompile 'jakarta.platform:jakarta.jakartaee-api:9.1.0'
+    providedCompile 'org.eclipse.microprofile:microprofile:5.0'
 
     // test dependencies
     testImplementation 'junit:junit:4.12'
